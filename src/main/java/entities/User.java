@@ -1,7 +1,7 @@
 package entities;
 
 
-import com.example.gestioneEventi.enums.Ruolo;
+import enums.Ruolo;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

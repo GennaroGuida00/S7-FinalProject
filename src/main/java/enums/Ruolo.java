@@ -1,4 +1,4 @@
-package com.example.gestioneEventi.enums;
+package enums;
 
 public enum Ruolo {
     PARTECIPANTE,ORGANIZZATORE
