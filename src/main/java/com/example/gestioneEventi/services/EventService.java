@@ -35,7 +35,7 @@ public class EventService {
     public Event findByIdAndUpdate(long id, NewEventDto eventDto, User currentUser){
         Event found=eventRepository.findById(id).orElseThrow(()->new NotFoundException(id));
 
-        if (!found.getOrganizer().getId()==currentUser.getId()){
+        if (!(found.getOrganizer().getId() ==currentUser.getId())){
             throw new UnauthorizedException("non puoi modificare l'evento");
         }
 
