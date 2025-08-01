@@ -11,7 +11,7 @@ import com.example.gestioneEventi.services.PrenotationService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/prenotazions")
+@RequestMapping("/prenotazioni")
 public class PrenotationController {
 
     @Autowired
