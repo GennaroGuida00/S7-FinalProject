@@ -1,17 +1,17 @@
-package services;
+package com.example.gestioneEventi.services;
 
 
 import com.example.gestioneEventi.exceptions.BookingNotAvailable;
 import com.example.gestioneEventi.exceptions.NotFoundException;
-import entities.Event;
-import entities.Prenotation;
-import entities.User;
-import payloads.NewPrenotationDto;
-import repositories.EventRepository;
-import repositories.PrenotationRepository;
+import com.example.gestioneEventi.entities.Event;
+import com.example.gestioneEventi.entities.Prenotation;
+import com.example.gestioneEventi.entities.User;
+import com.example.gestioneEventi.payloads.NewPrenotationDto;
+import com.example.gestioneEventi.repositories.EventRepository;
+import com.example.gestioneEventi.repositories.PrenotationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.UserRepository;
+import com.example.gestioneEventi.repositories.UserRepository;
 
 import java.util.List;
 

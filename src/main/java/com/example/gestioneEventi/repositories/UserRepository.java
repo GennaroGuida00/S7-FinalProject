@@ -1,6 +1,6 @@
-package repositories;
+package com.example.gestioneEventi.repositories;
 
-import entities.User;
+import com.example.gestioneEventi.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

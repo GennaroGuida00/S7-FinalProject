@@ -1,4 +1,4 @@
-package entities;
+package com.example.gestioneEventi.entities;
 
 import jakarta.persistence.*;
 

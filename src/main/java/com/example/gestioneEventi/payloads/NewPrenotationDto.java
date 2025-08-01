@@ -1,4 +1,4 @@
-package payloads;
+package com.example.gestioneEventi.payloads;
 
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotEmpty;

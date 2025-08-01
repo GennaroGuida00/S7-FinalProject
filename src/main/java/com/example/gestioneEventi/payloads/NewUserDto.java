@@ -1,6 +1,6 @@
-package payloads;
+package com.example.gestioneEventi.payloads;
 
-import enums.Ruolo;
+import com.example.gestioneEventi.enums.Ruolo;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 

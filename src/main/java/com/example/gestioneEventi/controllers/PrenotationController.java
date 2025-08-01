@@ -1,12 +1,12 @@
-package controllers;
+package com.example.gestioneEventi.controllers;
 
 
-import entities.Prenotation;
+import com.example.gestioneEventi.entities.Prenotation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import payloads.NewPrenotationDto;
-import services.PrenotationService;
+import com.example.gestioneEventi.payloads.NewPrenotationDto;
+import com.example.gestioneEventi.services.PrenotationService;
 
 import java.util.List;
 

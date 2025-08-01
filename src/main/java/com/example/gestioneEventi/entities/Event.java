@@ -1,4 +1,4 @@
-package entities;
+package com.example.gestioneEventi.entities;
 
 import jakarta.persistence.*;
 import org.springframework.cglib.core.Local;
@@ -17,6 +17,11 @@ public class Event {
     private String luogo;
     private LocalDate data;
     private int postiDisponibili;
+
+    @ManyToOne
+    @JoinColumn(name = "organizer_id", nullable = false)
+    private User organizer;
+
 
     public Event(String titolo, String descrizione, String luogo, LocalDate data, int postiDisponibili) {
         this.titolo = titolo;
@@ -71,6 +76,13 @@ public class Event {
 
     public void setPostiDisponibili(int postiDisponibili) {
         this.postiDisponibili = postiDisponibili;
+    }
+    public User getOrganizer() {
+        return organizer;
+    }
+
+    public void setOrganizer(User organizer) {
+        this.organizer = organizer;
     }
 
     @Override

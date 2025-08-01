@@ -1,11 +1,11 @@
-package controllers;
+package com.example.gestioneEventi.controllers;
 
-import entities.User;
+import com.example.gestioneEventi.entities.User;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import payloads.NewUserDto;
-import services.UserService;
+import com.example.gestioneEventi.payloads.NewUserDto;
+import com.example.gestioneEventi.services.UserService;
 
 import java.util.List;
 
@@ -32,8 +32,8 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User getById(@PathVariable String mail) {
-        return userService.findByEmail(mail);
+    public User getById(@PathVariable long id) {
+        return userService.findById(id);
     }
 
 
