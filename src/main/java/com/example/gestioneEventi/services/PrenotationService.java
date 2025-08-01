@@ -31,9 +31,8 @@ public class PrenotationService {
         return prenotationRepository.findById(id).orElseThrow(()->new NotFoundException(id));
     }
 
-    public Prenotation addPrenotation(NewPrenotationDto newPrenotationDto){
+    public Prenotation addPrenotation(NewPrenotationDto newPrenotationDto,User user){
         Event event=eventRepository.findById(newPrenotationDto.eventId()).orElseThrow(()->new NotFoundException(newPrenotationDto.eventId()));
-        User user=userRepository.findById(newPrenotationDto.userId()).orElseThrow(()->new NotFoundException(newPrenotationDto.userId()));
         boolean postiDisponibili=prenotationRepository.numeroPrenotazioniPerEvento(event)>=event.getPostiDisponibili();
         if (postiDisponibili) {
             throw new BookingNotAvailable(event.getId());

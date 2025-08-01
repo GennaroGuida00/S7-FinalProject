@@ -2,8 +2,10 @@ package com.example.gestioneEventi.controllers;
 
 
 import com.example.gestioneEventi.entities.Prenotation;
+import com.example.gestioneEventi.entities.User;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import com.example.gestioneEventi.payloads.NewPrenotationDto;
 import com.example.gestioneEventi.services.PrenotationService;
@@ -23,8 +25,8 @@ public class PrenotationController {
     }
 
     @PostMapping
-    public Prenotation creaPrenotazione(@Valid @RequestBody NewPrenotationDto prenotationDto) {
-        return prenotationService.addPrenotation(prenotationDto);
+    public Prenotation creaPrenotazione(@Valid @RequestBody NewPrenotationDto prenotationDto, @AuthenticationPrincipal User currentUser) {
+        return prenotationService.addPrenotation(prenotationDto,currentUser);
     }
 
     @DeleteMapping("/{id}")
